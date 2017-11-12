@@ -103,7 +103,7 @@ namespace WinMasto.Tools
 
         private int _sinceId;
 
-        private int _maxId;
+        private long _maxId;
 
         private MastodonClient _client;
 

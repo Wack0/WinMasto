@@ -15,7 +15,7 @@ namespace WinMasto.Tools
 {
     public class TimelineScrollingCollection : ObservableCollection<Status>, ISupportIncrementalLoading
     {
-        public TimelineScrollingCollection(MastodonClient client, string path, int accountId = 0)
+        public TimelineScrollingCollection(MastodonClient client, string path, long accountId = 0)
         {
             HasMoreItems = true;
             IsLoading = false;
@@ -122,9 +122,9 @@ namespace WinMasto.Tools
 
         private int _sinceId;
 
-        private int _maxId;
+        private long _maxId;
 
-        private int _accountId;
+        private long _accountId;
 
         private MastodonClient _client;
 

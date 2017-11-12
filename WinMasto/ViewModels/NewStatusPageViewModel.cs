@@ -122,12 +122,12 @@ namespace WinMasto.ViewModels
         {
             IsLoading = true;
             if (string.IsNullOrEmpty(Status) || Status.Length > 500) return;
-            IEnumerable<int> mediaIds = null;
+            IEnumerable<long> mediaIds = null;
             if (PhotoList.Any())
             {
                 mediaIds = PhotoList.Select(node => node.Attachment.Id);
             }
-            int? replyId = null;
+            long? replyId = null;
             if (ReplyStatus != null) replyId = ReplyStatus.Id;
             try
             {
